@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/fav-icon/favicon.ico">
+    <title>Satish Kumar Verma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span><i class="fa-brands fa-shoelace"></i></span><i class="fa-brands fa-vine"></i>
+                </h1>
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#achievement">Achievement</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span class="name">Satish Kumar Verma</span></h1>
+                <h2><span id="text-auto"></span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-container">
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <h1>About Me</h1>
+                        <img src="images/profile/profile.png" alt="img">
+                    </div>
+                    <div class="about-col-2">
+                        <h1>About Me</h1>
+                        <p>Self Motivated, Hard Working & Goal Oriented with a high degree of flexibility, creativity, A
+                            dedicated and tech-savvy individual with a Bachelor in Computer Application searching for a
+                            challenging role at a progressive organization that offers immense growth opportunities and
+                            to
+                            implement my advanced knowledge and skills to contribute to the success of the organization.
+                        </p>
+                        <div class="tab-title">
+                            <p class="tab-link active" onclick="opentab('skill')">Skill</p>
+                            <p class="tab-link" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-content active-tab" id="skill">
+                            <ul>
+                                <li><span>Front-End</span><br>Html, Css, JavaScript, Bootstarp, jQuery</li>
+                                <li><span>Back-End</span><br>Python, Django</li>
+                                <li><span>Database</span><br>MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>2023</span><br><b>Bechelor Of computer Application(BCA)</b><br>K.S. Rangasamy
+                                    College of Arts and Science</li>
+                                <li><span>2020</span><br><b>HSC</b><br>Siddhartha Matric High Sec. School</li>
+                                <li><span>2018</span><br><b>SSC</b><br>Siddhartha Matric High Sec. School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="achievement">
+            <div class="container">
+                <h1>Achievement</h1>
+                <div class="service-list">
+                    <div>
+                        <i class="fa-solid fa-certificate"></i>
+                        <h2>Research</h2>
+                        <p> Participation certificate in International Guest Lecture on “Research Opportunities
+                            and Challenges in Computing 2022” organized by Dr. Awodele Oludele Babcock
+                            University, Nigeria & K.S.Rangasamy College of Arts and Science (KSRCAS)
+                            (Autonomous).</p>
+                        <a href="https://www.ksrcas.edu/" target="_blank">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Devtown</h2>
+                        <p> Participation certificate for successfully completing 7-days free Bootcamp on Create
+                            Facebook Login using HTML & CSS by Devtown.</p>
+                        <a href="https://www.devtown.in/" target="_blank">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-leanpub"></i>
+                        <h2>Sololearn</h2>
+                        <p> Certificate of completion an online course Introduction to Python, Introduction to
+                            JavaScript, Introduction to Html and Introduction to Css provided by Sololearn
+                            Academy.</p>
+                        <a href="https://www.sololearn.com/" target="_blank">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio">
+            <div class="container">
+                <h1>My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/project/bus-ticket-reservation-system.png" alt="img">
+                        <div class="layer">
+                            <h3>Bus Ticket Reservation System</h3>
+                            <P>The Bus Ticket Reservation System project is created by using Html, Css, Bootstrap,
+                                JavaScript in front-end and Python in Back-end, Django used as Python framework. Sqlite3
+                                is
+                                used to store data into database. Using this website user can book there Bus Tickets in
+                                online.
+                            </P>
+                            <a href="https://github.com/Satishkumarverma/Bus-Ticket-Reservation-System"
+                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/e-commerce-shoppingmart.png" alt="img">
+                        <div class="layer">
+                            <h3>E-commerce website Shopping Mart</h3>
+                            <P>This project is designed by using Html, Css, Bootstrap, JavaScript and jQuery in
+                                front-end
+                                and Python, Django in back-end. Sqlite3 for database. Using this project user can book
+                                there
+                                product in online, track its status and make payment online.</P>
+                            <a href="https://github.com/Satishkumarverma/Ecommerce-ShoppingMart" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/age-calculator.png" alt="img">
+                        <div class="layer">
+                            <h3>Age Calculator</h3>
+                            <P>The Age Calculator project is made by using Html, Css and Javascript.
+                                Age Calculator project display your currect age by taking your Date of birth as input.
+                            </P>
+                            <a href="https://github.com/Satishkumarverma/Age-Calculator" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ADD MORE PROJECT -->
+                <div class="work-list" id="more">
+                    <div class="work">
+                        <img src="images/project/qr-code-generator.png" alt="img">
+                        <div class="layer">
+                            <h3>QR Code Generator</h3>
+                            <P>The QR Code Generator project is designed by using Html, Css and Javascript.
+                                This project will generate a QR code of url or text. User can customise the size and
+                                colour
+                                of QR code as well as they can download it.</P>
+                            <a href="https://github.com/Satishkumarverma/QR-Code-Generator" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/random-jokes.png" alt="img">
+                        <div class="layer">
+                            <h3>Random Jokes</h3>
+                            <P>This project is designed width Html, Css and Javascript.
+                                The project will show the random Hindi and English Jokes. Jokes are fetched from API.
+                            </P>
+                            <a href="https://github.com/Satishkumarverma/Random-Jokes" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/random-password-generator.png" alt="img">
+                        <div class="layer">
+                            <h3>Random Password Generator</h3>
+                            <P>Random Password Generator is designed by using Html, Css and Javascript.It help to
+                                generate random password, user have to enter the password size into input box and it
+                                will generate password.They can easily copy there password by clicking copy button.</P>
+                            <a href="https://github.com/Satishkumarverma/Random-Password-Generator" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/code-editor.png" alt="img">
+                        <div class="layer">
+                            <h3>Live Code Editor</h3>
+                            <P>The Live Code Editor is designed by using Html, Css, Bootstrap and Javascript.
+                                Using this website user can able to write there Html, Css, Javascript code and viwe
+                                there live output into the output box.</P>
+                            <a href="https://github.com/Satishkumarverma/Live-Code-Editor" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/weather-forcast.jpeg" alt="img">
+                        <div class="layer">
+                            <h3>Weather Fourcast</h3>
+                            <P>The Weather fourcast website is designed by using Html, Bootstrap and Javascript. Here I
+                                fetch the weather details from OpenWeather API by using javascript.Using this website
+                                the user can get there current weather status(Temperature, Wind Speed and Humidity) of
+                                village, city and country.</P>
+                            <a href="https://github.com/Satishkumarverma/Weather-Fourcast" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/textutils.jpeg" alt="img">
+                        <div class="layer">
+                            <h3>Textutils</h3>
+                            <P>This website is created by using Html, css and javascript.By using this website user can
+                                able
+                                to change there text from uppercase to lowercase as well as lowercase to upper case and
+                                also they can copy there text and remove the extra spaces easily.</P>
+                            <a href="https://github.com/Satishkumarverma/Textutils" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/project/calculator.png" alt="img">
+                        <div class="layer">
+                            <h3>Calculator</h3>
+                            <P>This Calculator is created by using Html, css and javascript.By using this website user
+                                can perform mathematical calculations.</P>
+                            <a href="https://github.com/Satishkumarverma/Calculator" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" onclick="seemore()" id="seemore">See more</button>
+                <a href="#portfolio" class="btn" onclick="seeless()" id="seeless" style="display: none;">See less</a>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contect-left">
+                        <h1>Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> satishkumarverm413@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 9361891307</p>
+                        <div class="socialmedia-icons">
+                            <a href="https://x.com/SatishVerma413?t=WDYWJsEoXMJ1nFb-lJQzRA&s=08" target="_blank"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com/itz_satish__07_?igsh=MXRoZWluOGJvNGVsZA=="
+                                target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/satishkumarverma3" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Satishkumarverma" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a href="images/CV - Satish Kumar Verma.pdf" download class="btn btn2 cv">Download CV</a>
+                    </div>
+                    <div class="contect-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="10" placeholder="Your Message"></textarea>
+                            <input type="submit" class="btn btn2 submit-btn" value="Submit"><br>
+                        </form>
+                        <div id="content_msg">
+                        </div>
+                        <p id="msg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#header" class="up_arrow"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; Satish Kumar Verma all Rights Resrved.</p>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
