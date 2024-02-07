@@ -37,14 +37,9 @@ nav {
     flex-wrap: wrap;
 }
 
-.logo {
-    font-size: 22px;
-    margin-top: 1%;
-}
-
-.logo span {
-    font-size: 22px;
-    color: var(--bg-color);
+nav img {
+    width: 30px;
+    height: 30px;
 }
 
 nav ul {
@@ -242,7 +237,7 @@ nav a:hover::after {
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 35px;
+    gap: 45px;
     margin-top: 20px;
 }
 
@@ -254,10 +249,14 @@ nav a:hover::after {
 
 .work-list .work img {
     width: 100%;
-    height: 400px;
+    height: 420px;
     display: block;
     border-radius: 15px;
     transition: transform 0.5s;
+}
+
+#more {
+    margin-top: 50px;
 }
 
 .work .layer {
@@ -289,11 +288,16 @@ nav a:hover::after {
     color: var(--bg-color);
     text-decoration: none;
     font-size: 16px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-color: white;
     border-radius: 50%;
     padding: 13px;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
 }
 
 .work:hover img {
