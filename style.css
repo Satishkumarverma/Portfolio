@@ -38,8 +38,9 @@ nav {
 }
 
 nav img {
-    width: 30px;
-    height: 30px;
+    width: 115px;
+    height: 25px;
+    margin-top: 12px;
 }
 
 nav ul {
@@ -236,8 +237,8 @@ nav a:hover::after {
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 45px;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-gap: 45px;
     margin-top: 20px;
 }
 
@@ -450,6 +451,11 @@ nav .fa-solid {
         font-size: 25px;
     }
 
+    nav img {
+        width: 90px;
+        height: 20px;
+    }
+
     nav ul {
         background-color: var(--bg-color);
         position: fixed;
@@ -496,6 +502,11 @@ nav .fa-solid {
 
     .about-col-2 h1 {
         display: none;
+    }
+
+    /* ------------------------------portfolio-------------------------- */
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     /* --------------contect--------------- */
