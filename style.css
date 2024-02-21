@@ -190,20 +190,18 @@ nav a:hover::after {
     padding: 30px 0;
 }
 
-.service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.item {
     margin-top: 50px;
 }
 
-.service-list h2 {
+.item h2 {
     margin-bottom: 15px;
     font-size: 30px;
     font-weight: 500;
 }
 
-.service-list div {
+.item div {
+    height: 320px;
     background-color: #282828;
     padding: 30px;
     border-radius: 5px;
@@ -212,22 +210,30 @@ nav a:hover::after {
     transition: background 0.5s, transform 0.5s;
 }
 
-.service-list div i {
+.item div i {
     font-size: 50px;
     margin-bottom: 20px;
 }
 
-.service-list div a {
+.item div a {
     text-decoration: none;
     color: white;
     margin-top: 20px;
     display: inline-block;
 }
 
-.service-list div:hover {
+.item div:hover {
     background-color: var(--bg-color);
     transform: translateY(-10px);
     transition: 0.5S;
+}
+
+.carousel_1 .owl-dot span {
+    background-color: rgb(43, 43, 43) !important;
+}
+
+.carousel_1 .owl-dot.active span {
+    background-color: white !important;
 }
 
 /* ----------------------------portfolio------------------------- */
@@ -375,6 +381,24 @@ nav a:hover::after {
     background-color: var(--bg-color);
 }
 
+.cv {
+    margin: 50px auto 18px auto;
+}
+
+.share i {
+    padding: 8px;
+    border-radius: 30%;
+    border: 2px solid var(--bg-color);
+    transition: background 0.5s;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.share i:hover {
+    background-color: var(--bg-color);
+}
+
 .contect-right form {
     width: 100%;
 }
@@ -394,6 +418,10 @@ form textarea {
 form .btn2 {
     cursor: pointer;
     margin-top: 20px;
+}
+
+form .error {
+    color: red;
 }
 
 .copy-rights {
@@ -533,5 +561,14 @@ nav .fa-solid {
 
     .up_arrow {
         display: none;
+    }
+
+    .share {
+        display: block;
+        text-align: center;
+    }
+
+    .share i {
+        margin-left: 0;
     }
 }

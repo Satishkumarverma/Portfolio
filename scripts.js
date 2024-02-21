@@ -7,8 +7,12 @@ const btn_seemore = document.getElementById('seemore')
 const btn_seeless = document.getElementById('seeless')
 const content = document.querySelector('#side-menu')
 const content_msg = document.getElementById('content_msg')
+const cus_name = document.getElementById('name')
+const cus_email = document.getElementById('email')
+const error_name = document.getElementById('error_name')
+const error_email = document.getElementById('error_email')
 
-
+// ----------------------------------------About-------------------------------------------
 function opentab(tabname) {
     for (tl of tab_link) {
         tl.classList.remove('active')
@@ -20,6 +24,7 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add('active-tab')
 }
 
+// ----------------------------------------Navbar------------------------------------------
 if (side_menu.style.right = '-200px') {
     content.addEventListener('click', closemenubar)
 }
@@ -36,39 +41,80 @@ function openmenu() {
     side_menu.style.right = '0'
 }
 
+// --------------------------------------------Form-------------------------------------------
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxT4nK_KzKuamjyZXGn9z1rml1yfFUHGYC_a5M9dzowgVxXG3Le_aNDmitPri2TTUOG/exec'
 const form = document.forms['submit-to-google-sheet']
 
 form.addEventListener('submit', e => {
-    content_msg.innerHTML = `<img class="loader" src="loader/Spinner.gif" alt="loader">`
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            content_msg.innerHTML = ''
-            msg.innerHTML = `<i class="fa-solid fa-circle-check fa-l" style="color: green;"></i> Your message has been submited successfully!!`
-            setTimeout(function () {
-                msg.innerHTML = '';
-            }, 2000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+    let c_name = cus_name.value
+    let c_email = cus_email.value
+    error_name.innerHTML = ''
+    error_email.innerHTML = ''
+    if (c_name.length == 0) {
+        error_name.innerHTML = '*This field is required.'
+    } else if (c_email.length == 0) {
+        error_email.innerHTML = '*This field is required.'
+    }
+    else {
+        content_msg.innerHTML = `<img class="loader" src="loader/Spinner.gif" alt="loader">`
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                content_msg.innerHTML = ''
+                msg.innerHTML = `<i class="fa-solid fa-circle-check fa-l" style="color: green;"></i> Your message has been submited successfully!!`
+                setTimeout(function () {
+                    msg.innerHTML = '';
+                }, 2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    }
 })
 
+// ---------------------------------------------------Looping Text------------------------------
 let typed = new Typed('#text-auto', {
     strings: ['Web Developer'],
     typeSpeed: 100,
     loop: true,
 });
 
+// ------------------------------------------------Portfolio-------------------------------------
 function seemore() {
     more.style.display = 'grid'
     btn_seeless.style.display = 'block'
     btn_seemore.style.display = 'none'
 }
-
 function seeless() {
     more.style.display = 'none'
     btn_seeless.style.display = 'none'
     btn_seemore.style.display = 'block'
-}  
+}
 
+// -------------------------------------------------Share-----------------------------------------
+async function share() {
+    await navigator.share({
+        url: 'https://satishkumarverma.github.io/Portfolio/',
+    })
+}
+
+// ---------------------------------------------------Achivement-----------------------------------
+$(document).ready(function () {
+    $('.carousel_1').owlCarousel({
+        loop: true,
+        margin: 50,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+});
