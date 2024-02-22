@@ -49,14 +49,21 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     let c_name = cus_name.value
     let c_email = cus_email.value
+    let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     error_name.innerHTML = ''
     error_email.innerHTML = ''
-    if (c_name.length == 0) {
-        error_name.innerHTML = '*This field is required.'
-    } else if (c_email.length == 0) {
-        error_email.innerHTML = '*This field is required.'
-    }
-    else {
+    if (c_name.length == 0 | c_name.length <= 2 | c_email.length == 0 | !c_email.match(validEmail)) {
+        if (c_name.length == 0) {
+            error_name.innerHTML = '*This field is required.'
+        } else if (c_name.length <= 2) {
+            error_name.innerHTML = '*Enter the valid name.'
+        }
+        if (c_email.length == 0) {
+            error_email.innerHTML = '*This field is required.'
+        } else if (!c_email.match(validEmail)) {
+            error_email.innerHTML = '*Enter the valid email.'
+        }
+    } else {
         content_msg.innerHTML = `<img class="loader" src="loader/Spinner.gif" alt="loader">`
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
@@ -75,6 +82,7 @@ form.addEventListener('submit', e => {
 let typed = new Typed('#text-auto', {
     strings: ['Web Developer'],
     typeSpeed: 100,
+    backSpeed: 50,
     loop: true,
 });
 
@@ -102,15 +110,17 @@ $(document).ready(function () {
     $('.carousel_1').owlCarousel({
         loop: true,
         margin: 50,
-        nav: false,
+        nav: true,
         dots: true,
         autoplay: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false,
             },
             600: {
-                items: 2
+                items: 2,
+                nav: false,
             },
             1000: {
                 items: 3

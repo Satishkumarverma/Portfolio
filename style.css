@@ -41,6 +41,7 @@ nav img {
     width: 115px;
     height: 25px;
     margin-top: 12px;
+    cursor: pointer;
 }
 
 nav ul {
@@ -236,6 +237,46 @@ nav a:hover::after {
     background-color: white !important;
 }
 
+.carousel_1 .owl-prev {
+    position: absolute;
+    left: -7%;
+    top: 165px;
+    transition: 0.5s;
+}
+
+.carousel_1 .owl-prev:hover {
+    background-color: black !important;
+}
+
+.carousel_1 .owl-prev span {
+    font-size: xxx-large;
+    transition: 0.5s;
+}
+
+.carousel_1 .owl-prev span:hover {
+    color: var(--bg-color);
+}
+
+.carousel_1 .owl-next {
+    position: absolute;
+    right: -7%;
+    top: 165px;
+    transition: 0.5s;
+}
+
+.carousel_1 .owl-next span {
+    font-size: xxx-large;
+    transition: 0.5s;
+}
+
+.carousel_1 .owl-next:hover {
+    background-color: black !important;
+}
+
+.carousel_1 .owl-next span:hover {
+    color: var(--bg-color);
+}
+
 /* ----------------------------portfolio------------------------- */
 #portfolio {
     padding: 50px 0;
@@ -413,6 +454,17 @@ form textarea {
     margin: 15px 0;
     color: #fff;
     border-radius: 6px;
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color);
+    outline: 1px solid var(--bg-color);
+    border-radius: 20px;
 }
 
 form .btn2 {
