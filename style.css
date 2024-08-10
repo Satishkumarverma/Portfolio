@@ -420,11 +420,12 @@ nav a:hover::after {
 .btn.btn2 {
     display: inline-block;
     background-color: var(--bg-color);
+    transition: border 0.5s;
 }
 
 .btn.btn2:hover{
     border: 1px solid #ffc2c2;
-    transition: background,border 0.5s;
+    transition: background 0.5s;
 }
 
 .btn.btn2:focus{
