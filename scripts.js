@@ -80,9 +80,9 @@ form.addEventListener('submit', e => {
 
 // ---------------------------------------------------Looping Text------------------------------
 let typed = new Typed('#text-auto', {
-    strings: ['Web Developer'],
+    strings: ['Web Developer', 'Python Developer'],
     typeSpeed: 100,
-    backSpeed: 50,
+    backSpeed: 40,
     loop: true,
 });
 
