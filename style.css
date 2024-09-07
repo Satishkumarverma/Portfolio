@@ -100,11 +100,11 @@ nav a:hover::after {
     right: 50px;
     font-size: 20px;
     padding-top: 30px;
-    transition: 0.3s;
+    transition: transform 0.5s;
 }
 
 .up_arrow:hover {
-    font-size: 23px;
+    transform: translateY(-7px);
 }
 
 /* -----------------------about------------------------------ */
