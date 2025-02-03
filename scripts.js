@@ -42,7 +42,7 @@ function openmenu() {
 }
 
 // --------------------------------------------Form-------------------------------------------
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxT4nK_KzKuamjyZXGn9z1rml1yfFUHGYC_a5M9dzowgVxXG3Le_aNDmitPri2TTUOG/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx9T7ytxbYANHbFAue7Z7pum1GrfUq6jvxbzDZSpkBJN1pZSmzFRYBazUpA86WihHRALQ/exec'
 const form = document.forms['submit-to-google-sheet']
 
 form.addEventListener('submit', e => {
